@@ -75,6 +75,8 @@
          [self setArtist: artist];
          if (self.artist.name == nil) {
              NSLog(@"ERROR: Could not fetch artist!");
+             self.yearFormedLabel.text = @"Artist not found 🧐";
+             self.saveButton.enabled = false;
              return;
          }
     
