@@ -30,6 +30,11 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
     
+    if (dictionary[@"artists"] == NSNull.null) {
+        NSLog(@"Found it!");
+        return nil;
+    }
+    
     NSArray *artists = dictionary[@"artists"];
     NSDictionary *artistDictionary = artists[0];
     

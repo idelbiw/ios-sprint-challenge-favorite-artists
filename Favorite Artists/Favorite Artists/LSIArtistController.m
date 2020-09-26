@@ -100,7 +100,7 @@
         }
         
         LSIArtist *fetchedArtist = [[LSIArtist alloc] initWithDictionary:dictionary];
-        if (fetchedArtist.name == nil) {
+        if (fetchedArtist == nil) {
             NSLog(@"ERROR: Could not retrieve artist data, API return NULL!");
             dispatch_async(dispatch_get_main_queue(), ^{
                 completionHandler(nil, error);
