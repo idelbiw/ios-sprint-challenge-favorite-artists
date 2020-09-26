@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LSIArtist : NSObject
 
 /// Properties
-@property NSString *name;
-@property NSNumber *yearFormed;
-@property NSString *biograpy;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSNumber *yearFormed;
+@property (nonatomic) NSString *biograpy;
 
 ///  Initializers
 - (instancetype)initWithName:(NSString *)name

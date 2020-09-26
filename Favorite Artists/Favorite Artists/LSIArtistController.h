@@ -15,7 +15,7 @@ typedef void(^ArtistFetcherCompletionHandler)(LSIArtist *_Nullable artist, NSErr
 @interface LSIArtistController : NSObject
 
 ///  Properties
-@property NSMutableArray<LSIArtist *> *savedArtists;
+@property (nonatomic) NSMutableArray<LSIArtist *> *savedArtists;
 
 ///  Methods
 - (void)reloadArray;

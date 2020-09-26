@@ -6,6 +6,7 @@
 //
 
 #import "FavoriteArtistsTableViewController.h"
+#import "ArtistDetailViewController.h"
 #import "LSIArtistController.h"
 #import "LSIArtist.h"
 
@@ -14,7 +15,7 @@
 @interface FavoriteArtistsTableViewController ()
 
 ///  Properties
-@property LSIArtistController *artistController;
+@property (nonatomic) LSIArtistController *artistController;
 
 @end
 
@@ -53,6 +54,21 @@
 /// - Navigation -
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    if ([segue.identifier  isEqual: @"ArtistSearchSegue"]) {
+        ArtistDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.isDetailView = false;
+        NSLog(@"Segue path: Search mode");
+    }
+    else if ([segue.identifier isEqual: @"ArtistDetailSegue"]) {
+        
+        ArtistDetailViewController *detailVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+        long index = indexPath.row;
+        LSIArtist *tappedArtist = _artistController.savedArtists[index];
+        
+        [detailVC setArtist:tappedArtist];
+        detailVC.isDetailView = true;
+    }
 }
 
 

@@ -10,9 +10,6 @@
 //MARK: - Interface -
 @interface ArtistDetailViewController () <UISearchBarDelegate>
 
-///  Properties
-@property (nonatomic) LSIArtist *artist;
-
 ///  IBOutlets
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
@@ -33,6 +30,15 @@
     [super viewDidAppear:animated];
     _searchBar.delegate = self;
     _artistController = [[LSIArtistController alloc] init];
+    
+    if (_isDetailView == true) {
+        NSLog(@"Segue performed: detail mode");
+        [self setArtist:_artist];
+        self.title = _artist.name;
+        _saveButton.enabled = false;
+        _searchBar.hidden = true;
+    }
+    
 }
 
 - (void)setArtist:(LSIArtist *)artist {
@@ -79,8 +85,7 @@
 ///  - IBActions -
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
     [_artistController saveArtist:_artist];
-    [self dismissViewControllerAnimated:true completion:nil];
-    [self dismissViewControllerAnimated:true completion:nil];
+    [[self presentingViewController] dismissViewControllerAnimated:true completion:nil];
 }
 
 @end

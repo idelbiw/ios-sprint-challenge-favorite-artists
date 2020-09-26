@@ -12,8 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistDetailViewController : UIViewController
 
-@property LSIArtistController *artistController;
-@property BOOL detailView;
+@property (nonatomic) LSIArtistController *artistController;
+@property (nonatomic) LSIArtist *artist;
+@property (nonatomic) BOOL isDetailView;
 
 @end
 
