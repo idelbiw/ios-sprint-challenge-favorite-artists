@@ -38,7 +38,7 @@
     
     NSMutableArray *artistsArray = [[NSMutableArray alloc] init];
     for (NSDictionary *artistDictionary in artistsDictinariesArray) {
-        LSIArtist *fetchedArtist = [[LSIArtist alloc] initWithDictionary:artistDictionary];
+        LSIArtist *fetchedArtist = [[LSIArtist alloc] initWithDecodedDictionary:artistDictionary];
         [artistsArray addObject:fetchedArtist];
     }
     _savedArtists = artistsArray;

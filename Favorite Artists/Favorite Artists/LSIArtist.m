@@ -41,4 +41,14 @@
     return newArtist;
 }
 
+- (instancetype)initWithDecodedDictionary:(NSDictionary *)dictionary {
+    
+    NSString *name = dictionary[@"strArtist"];
+    NSNumber *yearFormed = dictionary[@"intFormedYear"];
+    NSString *biography = dictionary[@"strBiographyEN"];
+    
+    LSIArtist *newArtist = [[LSIArtist alloc] initWithName:name yearFormed:yearFormed biography:biography];
+    return newArtist;
+}
+
 @end

@@ -39,7 +39,13 @@
     
     LSIArtist *artist = _artistController.savedArtists[indexPath.row];
     cell.textLabel.text = artist.name;
-    cell.detailTextLabel.text = [@"Formed in: " stringByAppendingString: [artist.yearFormed stringValue]];
+    
+    ///  Re-using dumb code, if it works it works :)
+    int yearFormedInt = [artist.yearFormed intValue];
+    NSNumber *yearFormedNumber = [[NSNumber alloc] initWithInt:yearFormedInt];
+    NSString *yearFormedString = [@"Formed in:" stringByAppendingString:[yearFormedNumber stringValue]];
+    
+    cell.detailTextLabel.text = [@"Formed in: " stringByAppendingString: yearFormedString];
     
     return cell;
 }
