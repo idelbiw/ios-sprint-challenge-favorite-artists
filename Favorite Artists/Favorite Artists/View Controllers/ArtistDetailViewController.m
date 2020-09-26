@@ -80,6 +80,7 @@
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
     [_artistController saveArtist:_artist];
     [self dismissViewControllerAnimated:true completion:nil];
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 @end
