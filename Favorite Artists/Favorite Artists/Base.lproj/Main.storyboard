@@ -92,7 +92,7 @@
                             <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rxk-Ow-vbB">
                                 <rect key="frame" x="0.0" y="308" width="414" height="554"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text" base64-UTF8="YES">
+                                <string key="text" base64-UTF8="YES">
 TG9yZW0gaXBzdW0gZG9sb3Igc2l0IGVyIGVsaXQgbGFtZXQsIGNvbnNlY3RldGF1ciBjaWxsaXVtIGFk
 aXBpc2ljaW5nIHBlY3UsIHNlZCBkbyBlaXVzbW9kIHRlbXBvciBpbmNpZGlkdW50IHV0IGxhYm9yZSBl
 dCBkb2xvcmUgbWFnbmEgYWxpcXVhLiBVdCBlbmltIGFkIG1pbmltIHZlbmlhbSwgcXVpcyBub3N0cnVk
@@ -104,7 +104,7 @@ b2ZmaWNpYSBkZXNlcnVudCBtb2xsaXQgYW5pbSBpZCBlc3QgbGFib3J1bS4gTmFtIGxpYmVyIHRlIGNv
 bnNjaWVudCB0byBmYWN0b3IgdHVtIHBvZW4gbGVndW0gb2Rpb3F1ZSBjaXZpdWRhLgMDAyAgICAgICAg
 ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQmFz
 aWNhbGx5IGlmIHlvdSdyZSBzZWVpbmcgdGhpcyB0aGVuIHNvbWV0aGluZyB3ZW50IHdyb25nA
-</mutableString>
+</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -143,7 +143,7 @@ aWNhbGx5IGlmIHlvdSdyZSBzZWVpbmcgdGhpcyB0aGVuIHNvbWV0aGluZyB3ZW50IHdyb25nA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmr-Lq-E6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156.521739130435" y="91.741071428571431"/>
+            <point key="canvasLocation" x="1212" y="92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5yA-OV-TPZ">
@@ -165,7 +165,7 @@ aWNhbGx5IGlmIHlvdSdyZSBzZWVpbmcgdGhpcyB0aGVuIHNvbWV0aGluZyB3ZW50IHdyb25nA
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LQh-sS-dTm"/>
+        <segue reference="aZJ-At-swA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">

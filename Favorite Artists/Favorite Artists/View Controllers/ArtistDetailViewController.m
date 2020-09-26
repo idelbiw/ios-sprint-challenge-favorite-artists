@@ -87,7 +87,7 @@
 ///  - IBActions -
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
     [_artistController saveArtist:_artist];
-    [[self presentingViewController] dismissViewControllerAnimated:true completion:nil];
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 @end
