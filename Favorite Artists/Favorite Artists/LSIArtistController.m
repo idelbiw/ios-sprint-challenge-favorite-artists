@@ -68,8 +68,16 @@
 
 /// - Networking -
 - (void)fetchArtistWithSearchTerm:(NSString *)searchTerm completionHandler:(nonnull ArtistFetcherCompletionHandler)completionHandler {
-    NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
-    NSURL *url = [[NSURL alloc] initWithString:[baseURL stringByAppendingString:searchTerm]];
+    NSString *urlString = [@"https://www.theaudiodb.com/api/v1/json/1/search.php?s=" stringByAppendingString:searchTerm];
+    NSMutableString *urlStringCopy = [[NSMutableString alloc] initWithString:urlString.copy];
+//
+//    for (__strong NSString *character in urlStringCopy) {
+//        if ([character isEqual: @" "]) {
+//            character = @"%20";
+//        }
+//    }
+    
+    NSURL *url = [[NSURL alloc] initWithString:urlString];
     
     [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
