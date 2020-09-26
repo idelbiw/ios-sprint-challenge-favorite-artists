@@ -15,11 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 //  Properties
 @property NSMutableArray<LSIArtist *> *savedArtists;
 
-//  Initializers
-//  This initializer will basically create a new instance of the model controller and refresh its array with whatever data resides in the user's documents directory
-- (void)reloadArray;
+//  Initializer
+
 
 //  Methods
+- (void)reloadArray;
 - (void)saveArtist:(LSIArtist *)artist;
 
 @end
