@@ -9,7 +9,7 @@
 
 @implementation LSIArtist
 
-//  Methods
+///  Methods
 -(NSDictionary *)returnDictionary {
     return @{
         @"strArtist":       self.name,
@@ -18,7 +18,7 @@
     };
 }
 
-//  Initializers
+///  Initializers
 - (instancetype)initWithName:(NSString *)name yearFormed:(NSNumber *)yearFormed biography:(NSString *)biography
 {
     _name = name;

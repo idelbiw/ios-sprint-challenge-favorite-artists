@@ -9,7 +9,7 @@
 
 @implementation LSIArtistController
 
-//  - Initializer -
+///  - Initializer -
 - (instancetype)init
 {
     self = [super init];
@@ -27,6 +27,7 @@
     NSData *data = [NSData dataWithContentsOfURL:[self documentsURL]];
     if (!data) {
         NSLog(@"ERROR: Data not found!");
+        return;
     }
     
     NSError *error = nil;
@@ -65,7 +66,7 @@
     return [documentsDirectoryURL URLByAppendingPathComponent: @"FavoriteArtists.json"];
 }
 
-// - Networking -
+/// - Networking -
 - (LSIArtist *)fetchArtistWithSearchTerm:(NSString *)searchTerm {
     NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
     NSURL *url = [[NSURL alloc] initWithString:[baseURL stringByAppendingString:searchTerm]];

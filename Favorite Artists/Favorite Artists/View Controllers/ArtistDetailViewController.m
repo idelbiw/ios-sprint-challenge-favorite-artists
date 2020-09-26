@@ -5,42 +5,37 @@
 //  Created by Waseem Idelbi on 9/25/20.
 //
 
-#import "AddArtistViewController.h"
+#import "ArtistDetailViewController.h"
 
 //MARK: - Interface -
-@interface AddArtistViewController ()
+@interface ArtistDetailViewController () <UISearchBarDelegate>
 
-//  IBOutlets
+///  IBOutlets
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearFormedLabel;
 @property (weak, nonatomic) IBOutlet UITextView *artistBiographyTextView;
 
-//  IBActions
+///  IBActions
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender;
 
 @end
 
 //MARK: - Implementation
-@implementation AddArtistViewController
+@implementation ArtistDetailViewController
 
-//  - Methods -
+///  - View Controller Methods -
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+///  - UISearchBar Delegate Methods -
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
 }
-*/
 
-//  - IBActions -
+///  - IBActions -
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
     
 }

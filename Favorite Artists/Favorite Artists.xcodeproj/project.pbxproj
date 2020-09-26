@@ -14,7 +14,7 @@
 		7B0C7C86251ECCDF0058A5FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B0C7C84251ECCDF0058A5FA /* LaunchScreen.storyboard */; };
 		7B0C7C89251ECCDF0058A5FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C7C88251ECCDF0058A5FA /* main.m */; };
 		7B0C7C97251ED0990058A5FA /* FavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C7C96251ED0990058A5FA /* FavoriteArtistsTableViewController.m */; };
-		7B0C7C9A251ED0AA0058A5FA /* AddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C7C99251ED0AA0058A5FA /* AddArtistViewController.m */; };
+		7B0C7C9A251ED0AA0058A5FA /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C7C99251ED0AA0058A5FA /* ArtistDetailViewController.m */; };
 		7B0C7C9E251ED1130058A5FA /* LSIArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C7C9D251ED1130058A5FA /* LSIArtist.m */; };
 		7B0C7CA2251EDC6F0058A5FA /* LSIArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C7CA1251EDC6F0058A5FA /* LSIArtistController.m */; };
 /* End PBXBuildFile section */
@@ -32,8 +32,8 @@
 		7B0C7C88251ECCDF0058A5FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B0C7C95251ED0990058A5FA /* FavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
 		7B0C7C96251ED0990058A5FA /* FavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
-		7B0C7C98251ED0AA0058A5FA /* AddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddArtistViewController.h; sourceTree = "<group>"; };
-		7B0C7C99251ED0AA0058A5FA /* AddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddArtistViewController.m; sourceTree = "<group>"; };
+		7B0C7C98251ED0AA0058A5FA /* ArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		7B0C7C99251ED0AA0058A5FA /* ArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
 		7B0C7C9C251ED1130058A5FA /* LSIArtist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtist.h; sourceTree = "<group>"; };
 		7B0C7C9D251ED1130058A5FA /* LSIArtist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIArtist.m; sourceTree = "<group>"; };
 		7B0C7CA0251EDC6F0058A5FA /* LSIArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIArtistController.h; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0C7C92251ED0190058A5FA /* FavoriteArtistsTableVC */,
-				7B0C7C94251ED04F0058A5FA /* AddArtistVC */,
+				7B0C7C94251ED04F0058A5FA /* DetailArtistVC */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -120,13 +120,13 @@
 			name = FavoriteArtistsTableVC;
 			sourceTree = "<group>";
 		};
-		7B0C7C94251ED04F0058A5FA /* AddArtistVC */ = {
+		7B0C7C94251ED04F0058A5FA /* DetailArtistVC */ = {
 			isa = PBXGroup;
 			children = (
-				7B0C7C98251ED0AA0058A5FA /* AddArtistViewController.h */,
-				7B0C7C99251ED0AA0058A5FA /* AddArtistViewController.m */,
+				7B0C7C98251ED0AA0058A5FA /* ArtistDetailViewController.h */,
+				7B0C7C99251ED0AA0058A5FA /* ArtistDetailViewController.m */,
 			);
-			name = AddArtistVC;
+			name = DetailArtistVC;
 			sourceTree = "<group>";
 		};
 		7B0C7C9B251ED0F40058A5FA /* Models */ = {
@@ -219,7 +219,7 @@
 				7B0C7CA2251EDC6F0058A5FA /* LSIArtistController.m in Sources */,
 				7B0C7C97251ED0990058A5FA /* FavoriteArtistsTableViewController.m in Sources */,
 				7B0C7C78251ECCDE0058A5FA /* AppDelegate.m in Sources */,
-				7B0C7C9A251ED0AA0058A5FA /* AddArtistViewController.m in Sources */,
+				7B0C7C9A251ED0AA0058A5FA /* ArtistDetailViewController.m in Sources */,
 				7B0C7C9E251ED1130058A5FA /* LSIArtist.m in Sources */,
 				7B0C7C89251ECCDF0058A5FA /* main.m in Sources */,
 				7B0C7C7B251ECCDE0058A5FA /* SceneDelegate.m in Sources */,

@@ -9,7 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddArtistViewController : UIViewController
+@interface ArtistDetailViewController : UIViewController
+
+@property BOOL detailView;
 
 @end
 

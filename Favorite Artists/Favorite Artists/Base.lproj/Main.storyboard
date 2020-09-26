@@ -53,7 +53,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="UxN-x0-3cW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Y93-Yl-vsC">
                             <connections>
-                                <segue destination="Fne-Pp-Wpj" kind="show" identifier="AddArtistSegue" id="LQh-sS-dTm"/>
+                                <segue destination="Fne-Pp-Wpj" kind="show" identifier="ArtistSearchSegue" id="LQh-sS-dTm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -65,7 +65,7 @@
         <!--Add New Artist-->
         <scene sceneID="SHR-2s-LtB">
             <objects>
-                <viewController id="Fne-Pp-Wpj" customClass="AddArtistViewController" sceneMemberID="viewController">
+                <viewController id="Fne-Pp-Wpj" customClass="ArtistDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r9c-li-UZK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,19 +77,19 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skt-Uu-zJ0">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skt-Uu-zJ0">
                                 <rect key="frame" x="15" y="215" width="172" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year formed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVd-dX-yQi">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year formed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVd-dX-yQi">
                                 <rect key="frame" x="15" y="266" width="115" height="27"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rxk-Ow-vbB">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rxk-Ow-vbB">
                                 <rect key="frame" x="0.0" y="308" width="414" height="554"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <mutableString key="text" base64-UTF8="YES">
@@ -127,7 +127,7 @@ aWNhbGx5IGlmIHlvdSdyZSBzZWVpbmcgdGhpcyB0aGVuIHNvbWV0aGluZyB3ZW50IHdyb25nA
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="dDp-6H-b5Y">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Jqs-sZ-bcO">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="Jqs-sZ-bcO">
                             <connections>
                                 <action selector="saveButtonTapped:" destination="Fne-Pp-Wpj" id="yd8-Vz-2a7"/>
                             </connections>
@@ -164,7 +164,7 @@ aWNhbGx5IGlmIHlvdSdyZSBzZWVpbmcgdGhpcyB0aGVuIHNvbWV0aGluZyB3ZW50IHdyb25nA
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aZJ-At-swA"/>
+        <segue reference="LQh-sS-dTm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">

@@ -12,14 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIArtistController : NSObject
 
-//  Properties
+///  Properties
 @property NSMutableArray<LSIArtist *> *savedArtists;
 
-//  Methods
+///  Methods
 - (void)reloadArray;
 - (void)saveArtist:(LSIArtist *)artist;
 
-//  Networking
+///  Networking
 - (LSIArtist *)fetchArtistWithSearchTerm:(NSString *)searchTerm;
 
 @end
