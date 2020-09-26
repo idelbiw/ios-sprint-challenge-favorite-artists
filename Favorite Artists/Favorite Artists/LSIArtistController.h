@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^ArtistFetcherCompletionHandler)(LSIArtist *_Nullable artist, NSError *_Nullable error);
+
 @interface LSIArtistController : NSObject
 
 ///  Properties
@@ -20,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)saveArtist:(LSIArtist *)artist;
 
 ///  Networking
-- (LSIArtist *)fetchArtistWithSearchTerm:(NSString *)searchTerm;
+- (void)fetchArtistWithSearchTerm:(NSString *)searchTerm completionHandler:(ArtistFetcherCompletionHandler)completionHandler;
 
 @end
 

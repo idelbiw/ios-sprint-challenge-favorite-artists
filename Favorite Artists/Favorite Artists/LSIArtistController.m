@@ -67,35 +67,52 @@
 }
 
 /// - Networking -
-- (LSIArtist *)fetchArtistWithSearchTerm:(NSString *)searchTerm {
+- (void)fetchArtistWithSearchTerm:(NSString *)searchTerm completionHandler:(nonnull ArtistFetcherCompletionHandler)completionHandler {
     NSString *baseURL = @"https://www.theaudiodb.com/api/v1/json/1/search.php?s=";
     NSURL *url = [[NSURL alloc] initWithString:[baseURL stringByAppendingString:searchTerm]];
-    __block LSIArtist *possibleArtist = [[LSIArtist alloc] init];
     
     [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         if (error) {
             NSLog(@"ERROR: Could not complete the URL reqest or fetch artist");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, error);
+            });
+            return;
         }
         if (!data) {
             NSLog(@"Data not found!");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, error);
+            });
+            return;
         }
         
         NSError *jsonError;
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         if (jsonError) {
             NSLog(@"ERROR: Could not convert JSON into dectionary! %@", jsonError);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, error);
+            });
+            return;
             
         }
         
         LSIArtist *fetchedArtist = [[LSIArtist alloc] initWithDictionary:dictionary];
-        if (fetchedArtist == nil) {
+        if (fetchedArtist.name == nil) {
             NSLog(@"ERROR: Could not retrieve artist data, API return NULL!");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, error);
+            });
+            return;
         }
         
-        possibleArtist = fetchedArtist;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler(fetchedArtist, nil);
+        });
+        
     }]resume];
-    return possibleArtist;
 }
 
 @end

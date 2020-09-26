@@ -29,9 +29,13 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    NSString *name = dictionary[@"strArtist"];
-    NSNumber *yearFormed = dictionary[@"intFormedYear"];
-    NSString *biography = dictionary[@"strBiographyEN"];
+    
+    NSArray *artists = dictionary[@"artists"];
+    NSDictionary *artistDictionary = artists[0];
+    
+    NSString *name = artistDictionary[@"strArtist"];
+    NSNumber *yearFormed = artistDictionary[@"intFormedYear"];
+    NSString *biography = artistDictionary[@"strBiographyEN"];
     
     LSIArtist *newArtist = [[LSIArtist alloc] initWithName:name yearFormed:yearFormed biography:biography];
     return newArtist;

@@ -136,6 +136,7 @@ aWNhbGx5IGlmIHlvdSdyZSBzZWVpbmcgdGhpcyB0aGVuIHNvbWV0aGluZyB3ZW50IHdyb25nA
                     <connections>
                         <outlet property="artistBiographyTextView" destination="rxk-Ow-vbB" id="eyK-he-LJc"/>
                         <outlet property="artistNameLabel" destination="skt-Uu-zJ0" id="Z7U-os-Rmn"/>
+                        <outlet property="saveButton" destination="Jqs-sZ-bcO" id="Qdi-7N-2Jx"/>
                         <outlet property="searchBar" destination="OL2-lU-Tm7" id="m1N-n5-R5a"/>
                         <outlet property="yearFormedLabel" destination="NVd-dX-yQi" id="qFQ-MJ-MYu"/>
                     </connections>
