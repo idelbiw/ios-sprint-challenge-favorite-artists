@@ -9,4 +9,15 @@
 
 @implementation LSIArtistController
 
+// Initializer
+- (instancetype)initAndRefreshArray {
+    
+    return self;
+}
+
+//  Methods
+- (void)saveArtist:(LSIArtist *)artist {
+    
+}
+
 @end

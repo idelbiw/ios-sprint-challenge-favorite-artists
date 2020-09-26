@@ -6,16 +6,26 @@
 //
 
 #import "FavoriteArtistsTableViewController.h"
+#import "LSIArtistController.h"
+#import "LSIArtist.h"
+
 
 //MARK: - Interface -
 @interface FavoriteArtistsTableViewController ()
+
+//  Properties
+@property LSIArtistController *artistController;
+
 @end
+
+
 
 //MARK: - Implementation -
 @implementation FavoriteArtistsTableViewController
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
     [self.tableView reloadData];
 }
 

@@ -9,6 +9,15 @@
 
 @implementation LSIArtist
 
+//  Methods
+-(NSDictionary *)returnDictionary {
+    return @{
+        @"strArtist":       self.name,
+        @"intFormedYear":   self.yearFormed,
+        @"strBiographyEN":  self.biograpy,
+    };
+}
+
 //  Initializers
 - (instancetype)initWithName:(NSString *)name yearFormed:(NSNumber *)yearFormed biography:(NSString *)biography
 {
