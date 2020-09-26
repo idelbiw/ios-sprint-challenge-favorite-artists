@@ -40,6 +40,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Fne-Pp-Wpj" kind="show" identifier="ArtistDetailSegue" id="aZJ-At-swA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -50,7 +53,7 @@
                     <navigationItem key="navigationItem" title="Favorite Artists" id="UxN-x0-3cW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Y93-Yl-vsC">
                             <connections>
-                                <segue destination="Fne-Pp-Wpj" kind="show" id="LQh-sS-dTm"/>
+                                <segue destination="Fne-Pp-Wpj" kind="show" identifier="AddArtistSegue" id="LQh-sS-dTm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -86,8 +89,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rxk-Ow-vbB">
-                                <rect key="frame" x="0.0" y="256" width="414" height="606"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rxk-Ow-vbB">
+                                <rect key="frame" x="0.0" y="308" width="414" height="554"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <mutableString key="text" base64-UTF8="YES">
 TG9yZW0gaXBzdW0gZG9sb3Igc2l0IGVyIGVsaXQgbGFtZXQsIGNvbnNlY3RldGF1ciBjaWxsaXVtIGFk
@@ -111,25 +114,34 @@ aWNhbGx5IGlmIHlvdSdyZSBzZWVpbmcgdGhpcyB0aGVuIHNvbWV0aGluZyB3ZW50IHdyb25nA
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="skt-Uu-zJ0" firstAttribute="leading" secondItem="B0C-07-vhO" secondAttribute="leading" constant="15" id="1El-WR-Fm1"/>
-                            <constraint firstItem="rxk-Ow-vbB" firstAttribute="top" secondItem="skt-Uu-zJ0" secondAttribute="bottom" id="5Rg-I5-cjD"/>
-                            <constraint firstItem="B0C-07-vhO" firstAttribute="bottom" secondItem="rxk-Ow-vbB" secondAttribute="bottom" id="BIZ-2c-ojn"/>
-                            <constraint firstItem="rxk-Ow-vbB" firstAttribute="leading" secondItem="B0C-07-vhO" secondAttribute="leading" id="JSm-mi-wE1"/>
+                            <constraint firstItem="rxk-Ow-vbB" firstAttribute="top" secondItem="NVd-dX-yQi" secondAttribute="bottom" constant="15" id="AdC-jr-iLP"/>
                             <constraint firstItem="OL2-lU-Tm7" firstAttribute="leading" secondItem="B0C-07-vhO" secondAttribute="leading" id="NjV-JA-0mk"/>
                             <constraint firstItem="NVd-dX-yQi" firstAttribute="top" secondItem="skt-Uu-zJ0" secondAttribute="bottom" constant="10" id="Tkr-IX-7Fr"/>
                             <constraint firstItem="skt-Uu-zJ0" firstAttribute="top" secondItem="OL2-lU-Tm7" secondAttribute="bottom" constant="15" id="WFG-13-f71"/>
+                            <constraint firstItem="rxk-Ow-vbB" firstAttribute="leading" secondItem="B0C-07-vhO" secondAttribute="leading" id="Z6d-9g-DyZ"/>
                             <constraint firstAttribute="trailing" secondItem="OL2-lU-Tm7" secondAttribute="trailing" id="ajG-48-Pkn"/>
+                            <constraint firstItem="B0C-07-vhO" firstAttribute="bottom" secondItem="rxk-Ow-vbB" secondAttribute="bottom" id="iUx-My-IIN"/>
                             <constraint firstItem="NVd-dX-yQi" firstAttribute="leading" secondItem="B0C-07-vhO" secondAttribute="leading" constant="15" id="mmn-Nn-RgO"/>
-                            <constraint firstItem="B0C-07-vhO" firstAttribute="trailing" secondItem="rxk-Ow-vbB" secondAttribute="trailing" id="nLI-lt-F8B"/>
                             <constraint firstItem="OL2-lU-Tm7" firstAttribute="top" secondItem="B0C-07-vhO" secondAttribute="top" id="o6L-Hj-eB1"/>
+                            <constraint firstItem="B0C-07-vhO" firstAttribute="trailing" secondItem="rxk-Ow-vbB" secondAttribute="trailing" id="sqC-4x-PTV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Artist" id="dDp-6H-b5Y">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Jqs-sZ-bcO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Jqs-sZ-bcO">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="Fne-Pp-Wpj" id="yd8-Vz-2a7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistBiographyTextView" destination="rxk-Ow-vbB" id="eyK-he-LJc"/>
+                        <outlet property="artistNameLabel" destination="skt-Uu-zJ0" id="Z7U-os-Rmn"/>
+                        <outlet property="searchBar" destination="OL2-lU-Tm7" id="m1N-n5-R5a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmr-Lq-E6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157" y="92"/>
+            <point key="canvasLocation" x="1156.521739130435" y="91.741071428571431"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5yA-OV-TPZ">
@@ -150,6 +162,9 @@ aWNhbGx5IGlmIHlvdSdyZSBzZWVpbmcgdGhpcyB0aGVuIHNvbWV0aGluZyB3ZW50IHdyb25nA
             <point key="canvasLocation" x="-539.13043478260875" y="91.741071428571431"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aZJ-At-swA"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

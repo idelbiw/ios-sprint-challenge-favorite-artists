@@ -7,15 +7,26 @@
 
 #import "AddArtistViewController.h"
 
+//MARK: - Interface -
 @interface AddArtistViewController ()
+
+//  IBOutlets
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UITextView *artistBiographyTextView;
+
+//  IBActions
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender;
 
 @end
 
+//MARK: - Implementation
 @implementation AddArtistViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+//  - Methods -
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
 }
 
 /*
@@ -27,5 +38,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//  - IBActions -
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    
+}
 
 @end
