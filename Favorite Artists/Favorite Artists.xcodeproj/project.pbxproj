@@ -13,6 +13,8 @@
 		7B0C7C83251ECCDF0058A5FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B0C7C82251ECCDF0058A5FA /* Assets.xcassets */; };
 		7B0C7C86251ECCDF0058A5FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B0C7C84251ECCDF0058A5FA /* LaunchScreen.storyboard */; };
 		7B0C7C89251ECCDF0058A5FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C7C88251ECCDF0058A5FA /* main.m */; };
+		7B0C7C97251ED0990058A5FA /* FavoriteArtistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C7C96251ED0990058A5FA /* FavoriteArtistsTableViewController.m */; };
+		7B0C7C9A251ED0AA0058A5FA /* AddArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C7C99251ED0AA0058A5FA /* AddArtistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		7B0C7C85251ECCDF0058A5FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B0C7C87251ECCDF0058A5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B0C7C88251ECCDF0058A5FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B0C7C95251ED0990058A5FA /* FavoriteArtistsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteArtistsTableViewController.h; sourceTree = "<group>"; };
+		7B0C7C96251ED0990058A5FA /* FavoriteArtistsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteArtistsTableViewController.m; sourceTree = "<group>"; };
+		7B0C7C98251ED0AA0058A5FA /* AddArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddArtistViewController.h; sourceTree = "<group>"; };
+		7B0C7C99251ED0AA0058A5FA /* AddArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddArtistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,8 @@
 		7B0C7C90251ECCFB0058A5FA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7B0C7C92251ED0190058A5FA /* FavoriteArtistsTableVC */,
+				7B0C7C94251ED04F0058A5FA /* AddArtistVC */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -93,6 +101,24 @@
 				7B0C7C84251ECCDF0058A5FA /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		7B0C7C92251ED0190058A5FA /* FavoriteArtistsTableVC */ = {
+			isa = PBXGroup;
+			children = (
+				7B0C7C95251ED0990058A5FA /* FavoriteArtistsTableViewController.h */,
+				7B0C7C96251ED0990058A5FA /* FavoriteArtistsTableViewController.m */,
+			);
+			name = FavoriteArtistsTableVC;
+			sourceTree = "<group>";
+		};
+		7B0C7C94251ED04F0058A5FA /* AddArtistVC */ = {
+			isa = PBXGroup;
+			children = (
+				7B0C7C98251ED0AA0058A5FA /* AddArtistViewController.h */,
+				7B0C7C99251ED0AA0058A5FA /* AddArtistViewController.m */,
+			);
+			name = AddArtistVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +190,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B0C7C97251ED0990058A5FA /* FavoriteArtistsTableViewController.m in Sources */,
 				7B0C7C78251ECCDE0058A5FA /* AppDelegate.m in Sources */,
+				7B0C7C9A251ED0AA0058A5FA /* AddArtistViewController.m in Sources */,
 				7B0C7C89251ECCDF0058A5FA /* main.m in Sources */,
 				7B0C7C7B251ECCDE0058A5FA /* SceneDelegate.m in Sources */,
 			);
