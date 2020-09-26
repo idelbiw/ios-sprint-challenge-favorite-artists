@@ -13,12 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 // Properties
 @property NSString *name;
-@property NSString *FormedIn;
+@property NSNumber *yearFormed;
 @property NSString *biograpy;
 
 //  Initializers
 - (instancetype)initWithName:(NSString *)name
-                    formedIn:(NSString *)formedIn
+                    yearFormed:(NSNumber *)yearFormed
                    biography:(NSString *)biography;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
