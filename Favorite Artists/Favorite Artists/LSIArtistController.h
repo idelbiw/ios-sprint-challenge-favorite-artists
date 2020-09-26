@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //  Initializers
 //  This initializer will basically create a new instance of the model controller and refresh its array with whatever data resides in the user's documents directory
-- (instancetype)initAndRefreshArray;
+- (void)reloadArray;
 
 //  Methods
 - (void)saveArtist:(LSIArtist *)artist;
